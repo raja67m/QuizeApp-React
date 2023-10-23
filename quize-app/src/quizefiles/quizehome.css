@@ -1,15 +1,20 @@
 body{
-   background-color:rgb(253, 4, 187);
+   background-color:rgb(248, 244, 247);
 }
 .quizeAppContainer{
+   margin-top:20px;
 background-color: white;
 border: none;
 border-radius: 20px;
+height: 570px;
+margin-left: 50px;
+margin-right: 50px;
+box-shadow: 5px 5px 5px 5px rgb(200, 184, 184);
 }
 
 .LogoImage{
-   height: 150px;
-   width: 250px;
+   height: 130px;
+   width: 200px;
    margin-left:30px;
 }
 .IntroHeading{
@@ -21,47 +26,78 @@ border-radius: 20px;
 .QuizeOptions{
    display: flex;
    flex-direction: row;
-   justify-content: center;
+  justify-content: center;
    margin: 5px;
 }   
 .HtmlOption{
-  background-color: orangered;
- padding: 85px;
+  background-color: rgb(203, 69, 21);
+ padding: 60px;
   border: none;
   border-radius: 25px 25px 0px 0px;
-margin: 10px;    
+margin: 10px;  
+display: flex;
+flex-direction: column;
+cursor: pointer;  
 }
+
 .CssOption{
-   background-color:blue;
-   padding: 85px;
+   background-color:rgb(15, 15, 183);
+   padding: 60px;
     border: none;
     border-radius: 25px 25px 0px 0px; 
     margin: 10px; 
+    display: flex;
+flex-direction: column; 
+cursor: pointer;
 }
 .JavaScriptOption{
-   background-color:rgb(255, 204, 0);
-   padding: 85px;
+   background-color:rgb(244, 199, 17);
+   padding: 60px;
     border: none;
     border-radius: 25px 25px 0px 0px; 
-    margin: 10px; 
+    margin: 10px;
+    display: flex;
+flex-direction: column; 
+cursor: pointer;
 }
 .ReactOption{
-   background-color:rgb(0, 230, 230);
-   padding: 85px;
+   background-color:rgb(19, 196, 196);
+   padding: 60px;
     border: none;
     border-radius: 25px 25px 0px 0px; 
     margin: 10px; 
+    display: flex;
+flex-direction: column; 
+cursor: pointer;
 }
 .UiOption{
-   background-color:rgb(250, 3, 127);
-   padding: 85px;
+   background-color:rgb(204, 21, 113);
+   padding: 60px;
     border: none;
     border-radius: 25px 25px 0px 0px;  
-    margin: 10px; 
+    margin: 5px; 
+    display: flex;
+flex-direction: column; 
+cursor: pointer;
 }
 .QuizeImage{
    height: 60px;
    width: 60px;
+   margin: 10px;
+}
+.QuizeImageRead{
+   height: 60px;
+   width: 60px;
+   margin: 10px;
+   margin-left: 25px;
+}
+span{
+   color: white;
+   font-weight: bold;
+   text-transform: uppercase;
+   margin: 5px;
+   font-size: 15px;
+   text-align:start;
 }
 .QuizeStart{
    padding: 20px 40px;
@@ -72,6 +108,7 @@ margin: 10px;
    font-weight:bold;
    cursor: pointer;
    margin: 10px;
+margin-left: 570px;
 }
 .QuizeStart:hover{
    background-color: rgb(253, 112, 227);

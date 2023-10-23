@@ -19,21 +19,28 @@ class QuizeApp extends React.Component{
          <p className="IntroHeading">
             Choose from categories below & see how many questions you can answer correctly out 5 questions!
          </p>
+
          <div className="QuizeOptions">
             <div className="HtmlOption">
-               <img className="QuizeImage" src={Html} alt="Not Visible"/>
+               <img className="QuizeImageRead" src={Html} alt="Not Visible"/>
+               <span>html quize</span>
             </div>
             <div className="CssOption">
-                <img  className="QuizeImage" src={Html} alt="Not Visible"/>
+                <img  className="QuizeImage" src={Css} alt="Not Visible"/>
+                <span>css quize</span>
                 </div>
             <div className="JavaScriptOption">
-            <img className="QuizeImage"  src={Html} alt="Not Visible"/>
+            <img className="QuizeImage"  src={Js} alt="Not Visible"/>
+            <span>JS quize</span>
+            <span></span>
             </div>
             <div className="ReactOption">
-            <img className="QuizeImage" src={Html} alt="Not Visible"/>
+            <img className="QuizeImageRead" src={ReactJs} alt="Not Visible"/>
+            <span>react quize</span>
             </div>
             <div className="UiOption">
-            <img className="QuizeImage" src={Html} alt="Not Visible"/>
+            <img className="QuizeImage" src={UI} alt="Not Visible"/>
+            <span>Ui quize</span>
             </div>
          </div>
        
