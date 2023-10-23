@@ -1,0 +1,79 @@
+body{
+   background-color:rgb(253, 4, 187);
+}
+.quizeAppContainer{
+background-color: white;
+border: none;
+border-radius: 20px;
+}
+
+.LogoImage{
+   height: 150px;
+   width: 250px;
+   margin-left:30px;
+}
+.IntroHeading{
+   color:black;
+   font-weight: bold;
+   font-size: 18px;
+   text-align: center; 
+   }
+.QuizeOptions{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin: 5px;
+}   
+.HtmlOption{
+  background-color: orangered;
+ padding: 85px;
+  border: none;
+  border-radius: 25px 25px 0px 0px;
+margin: 10px;    
+}
+.CssOption{
+   background-color:blue;
+   padding: 85px;
+    border: none;
+    border-radius: 25px 25px 0px 0px; 
+    margin: 10px; 
+}
+.JavaScriptOption{
+   background-color:rgb(255, 204, 0);
+   padding: 85px;
+    border: none;
+    border-radius: 25px 25px 0px 0px; 
+    margin: 10px; 
+}
+.ReactOption{
+   background-color:rgb(0, 230, 230);
+   padding: 85px;
+    border: none;
+    border-radius: 25px 25px 0px 0px; 
+    margin: 10px; 
+}
+.UiOption{
+   background-color:rgb(250, 3, 127);
+   padding: 85px;
+    border: none;
+    border-radius: 25px 25px 0px 0px;  
+    margin: 10px; 
+}
+.QuizeImage{
+   height: 60px;
+   width: 60px;
+}
+.QuizeStart{
+   padding: 20px 40px;
+   border: none;
+   border-radius: 30px;
+   background-color:rgb(250, 3, 127);
+   color: white;
+   font-weight:bold;
+   cursor: pointer;
+   margin: 10px;
+}
+.QuizeStart:hover{
+   background-color: rgb(253, 112, 227);
+   color: black;
+}
