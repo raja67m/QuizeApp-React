@@ -1,0 +1,44 @@
+body{
+   background-color: rgb(54, 131, 198);
+}
+
+.HtmlQuize{
+   background-color: white;
+   padding: 30px;
+   margin: 100px;
+  }
+label{
+   margin: 40px;
+   padding: 20px;
+  }
+  input{
+   margin: 40px;
+   padding: 20px;
+   background-color:rgb(203, 69, 21);
+  }
+.question{
+   font-size: 20px;
+   font-weight: bold;
+   color:rgb(203, 69, 21);
+}
+.submitButton{
+   background-color: rgb(203, 69, 21);
+   padding: 20px 60px;
+   border: none;
+   border-radius: 28px;
+   color: white;
+   font-weight: bold;
+   cursor: pointer;
+   margin-left: 400px;
+}
+.submitButton:hover{
+  background-color: rgb(240, 122, 79); 
+   color: black;
+}
+
+
+
+
+
+
+ 
