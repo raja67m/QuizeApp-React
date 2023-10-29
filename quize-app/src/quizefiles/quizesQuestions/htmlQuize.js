@@ -9,19 +9,19 @@ render(){
 <label className="question">1. What is Html?</label>
 
 <div className="questionFirst">
-   <label>
+   <label className="AnsOption">
       <input type="radio" className="option" />
       option1
    </label>
-    <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-   <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-   <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
@@ -31,19 +31,19 @@ render(){
 {/* question box second */ }
 <label className="question">2. what is html course?</label>
   <div className="questionSecond">
-   <label>
+  <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-    <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-   <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-   <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
@@ -52,19 +52,19 @@ render(){
 
   <label className="question">3. what is html course?</label>
   <div className="questionSecond">
-   <label>
+  <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-    <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-   <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-   <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
@@ -74,19 +74,19 @@ render(){
 
   <label className="question">4.what is html course?</label>
   <div className="questionSecond">
-   <label>
+  <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-    <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-   <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-   <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
@@ -96,19 +96,19 @@ render(){
 
   <label className="question">5. what is html course?</label>
   <div className="questionSecond">
-   <label>
+  <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-    <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-   <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
-   <label>
+   <label className="AnsOption">
       <input type="radio" />
       option1
    </label>
