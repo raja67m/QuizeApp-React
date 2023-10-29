@@ -6,7 +6,7 @@ import Css from "./quizeappimg/css.png";
 import Js from "./quizeappimg/js.png";
 import ReactJs from "./quizeappimg/react.png";
 import UI from "./quizeappimg/Ui.png";
-
+import { Link } from 'react-router-dom';
 
 class QuizeApp extends React.Component{
 
@@ -21,10 +21,12 @@ class QuizeApp extends React.Component{
          </p>
 
          <div className="QuizeOptions">
+         <Link to ='/htmlquize'>
             <div className="HtmlOption">
                <img className="QuizeImageRead" src={Html} alt="Not Visible"/>
                <span>html quize</span>
             </div>
+            </Link>
             <div className="CssOption">
                 <img  className="QuizeImage" src={Css} alt="Not Visible"/>
                 <span>css quize</span>
