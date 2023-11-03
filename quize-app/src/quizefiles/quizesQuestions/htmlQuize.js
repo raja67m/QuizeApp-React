@@ -1,266 +1,94 @@
 import React from "react";
-import  "./htmlQuize.css";
-import { Link } from 'react-router-dom';
-class HtmlQuize extends React.Component{
+import "./htmlQuize.css";
 
-   constructor(props) {
-      super(props);
-      this.state = {
-        selectedOptions: {},
-        correctAnswers: {
-          1: 'Option1',
-          2: 'Option2',
-          3: 'Option3',
-          4: 'Option4',
-          5: 'Option5',
-        },
-        isSubmitEnabled: false,
-        errorMessage: '',
-      };
-    }
-  // handleOptionChange
-  handleOptionChange = (event) => {
-   const { name, value } = event.target;
-   this.setState((prevState) => ({
-     selectedOptions: {
-       ...prevState.selectedOptions,
-       [name]: value,
-     },
-   }));
- };
-
- // CalculateScore
- calculateScore = () => {
-   const { selectedOptions, correctAnswers } = this.state;
-   let score = 0;
-   for (const questionNumber in correctAnswers) {
-     if (selectedOptions[questionNumber] === correctAnswers[questionNumber]) {
-       score++;
-     }
-   }
-   return score;
- };
-
- // Handle the submit button click
-  handleSubmit = () => {
-    const { selectedOptions, correctAnswers } = this.state;
-
-    // Check if all questions have been answered
-    for (const questionNumber in correctAnswers) {
-      if (!selectedOptions[questionNumber]) {
-        this.setState({
-          errorMessage: 'Please answer all questions before submitting.',
-        });
-        return;
+class HtmlQuize extends React.Component {
+ constructor(props){
+  super(props);
+  this.state={
+    currentQuestion: 0,
+    questions:[
+      {
+        questoinText: "What is HTML?",
+        options: ["ProgramLanguage", "MarkupLanguage", "StyleLanguage", "A"],
+        correctAnswer: "MarkupLanguage",
+      },
+      {
+        questoinText: "Which tag uses a box?",
+        options: ["div", "label", "p", "input"],
+        correctAnswer: "div"
+      },
+      {
+        questoinText: "What is the HTML paragraph tag?",
+        options: ["p", "input", "a", "div"],
+        correctAnswer: "p"
       }
+    ],
+    selectedAnswers: Array(3).fill(null),
+    score: null
+  }
+ }
+//handleOptionChange
+handleOptionChange = (event, index) => {
+  const selectedAnswers = this.state.selectedAnswers.slice();
+  selectedAnswers[index] = event.target.value;
+  this.setState({ selectedAnswers });
+}
+
+calculateScore = () => {
+  const { questions, selectedAnswers } = this.state;
+  let score = 0;
+  for (let i = 0; i < questions.length; i++) {
+    if (selectedAnswers[i] === questions[i].correctAnswer) {
+      score++;
     }
+  }
 
-    // All questions have been answered, so enable the submit button and redirect
-    this.setState({ isSubmitEnabled: true });
-    this.props.history.push(`/score/${this.calculateScore()}`);
-  };
+  return score;
+}
 
-
-
-
-
-
-
-render(){
-
-   return<div className="HtmlQuize">
-
-<label className="question">1. What is Html?</label>
-
-<div className="questionFirst">
-   <label className="AnsOption">
-      <input type="radio" className="option" 
-      
-      value='Option1'
-      checked={this.state.selecedOptions==='Option1'}
-      onChange={this.handleOptionChange}
-      
-      />
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio"
-       value='Option2'
-       checked={this.state.selecedOptions==='Option2'}
-       onChange={this.handleOptionChange} />
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio" 
-       value='Option3'
-       checked={this.state.selecedOptions==='Option3'}
-       onChange={this.handleOptionChange}/>
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio" 
-       value='Option4'
-       checked={this.state.selecedOptions==='Option4'}
-       onChange={this.handleOptionChange}/>
-      option1
-   </label>
-  
-  </div>
-
-{/* question box second */ }
-<label className="question">2. what is html course?</label>
-  <div className="questionSecond">
-  <label className="AnsOption">
-      <input type="radio" 
-       value='Option1'
-       checked={this.state.selecedOptions==='Option1'}
-       onChange={this.handleOptionChange}/>
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio" 
-       value='Option2'
-       checked={this.state.selecedOptions==='Option2'}
-       onChange={this.handleOptionChange}/>
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio" 
-       value='Option3'
-      checked={this.state.selecedOptions==='Option3'}
-      onChange={this.handleOptionChange}/>
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio"
-       value='Option4'
-       checked={this.state.selecedOptions==='Option4'}
-       onChange={this.handleOptionChange} />
-      option1
-   </label>
-  
-  </div>
-
-  <label className="question">3. what is html course?</label>
-  <div className="questionSecond">
-  <label className="AnsOption">
-      <input type="radio" 
-       value='Option1'
-      checked={this.state.selecedOptions==='Option1'}
-      onChange={this.handleOptionChange}/>
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio"
-       value='Option2'
-       checked={this.state.selecedOptions==='Option2'}
-       onChange={this.handleOptionChange} />
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio"
-       value='Option3'
-       checked={this.state.selecedOptions==='Option3'}
-       onChange={this.handleOptionChange}/>
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio"
-       value='Option4'
-       checked={this.state.selecedOptions==='Option4'}
-       onChange={this.handleOptionChange} />
-      option1
-   </label>
- 
-  </div>
-
-
-  <label className="question">4.what is html course?</label>
-  <div className="questionSecond">
-  <label className="AnsOption">
-      <input type="radio"
-       value='Option1'
-      checked={this.state.selecedOptions==='Option1'}
-      onChange={this.handleOptionChange} />
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio"
-       value='Option2'
-       checked={this.state.selecedOptions==='Option2'}
-       onChange={this.handleOptionChange} />
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio"
-       value='Option3'
-       checked={this.state.selecedOptions==='Option3'}
-       onChange={this.handleOptionChange} />
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio"
-       value='Option4'
-       checked={this.state.selecedOptions==='Option4'}
-       onChange={this.handleOptionChange} />
-      option1
-   </label>
-   
-  </div>
-
-
-  <label className="question">5. what is html course?</label>
-  <div className="questionSecond">
-  <label className="AnsOption">
-      <input type="radio" 
-       value='Option1'
-       checked={this.state.selecedOptions==='Option1'}
-       onChange={this.handleOptionChange}/>
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio" 
-       value='Option2'
-       checked={this.state.selecedOptions==='Option2'}
-       onChange={this.handleOptionChange}/>
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio"
-       value='Option3'
-       checked={this.state.selecedOptions==='Option3'}
-       onChange={this.handleOptionChange} />
-      option1
-   </label>
-   <label className="AnsOption">
-      <input type="radio" 
-       value='Option4'
-       checked={this.state.selecedOptions==='Option4'}
-       onChange={this.handleOptionChange}/>
-      option1
-   </label>
- 
-  </div>
-
-  <Link to ='/score'> 
-<button className="submitButton"
-onClick={this.handleSubmit}
-disabled={!this.state.isSubmitEnabled}
->Submit</button>
-
-</Link>
-
-{this.state.errorMessage &&(
-   <div className="errorMessage">{this.state.errorMessage}</div>
-)}
-
-
-
-
-   </div>
+//handlesubmit
+handleSubmit = () => {
+  const score = this.calculateScore();
+  this.setState({ score });
 }
 
 
 
+
+
+ render() {
+  const { questions, selectedAnswers, currentQuestion, score } = this.state; // Corrected variable name here
+
+   return (
+     <div className="HtmlQuize">
+       {questions.map((question, index) => (
+         <div key={index}>
+           <label className="question">{question.questoinText}</label>
+           <div className="questionFirst">
+             {question.options.map((option, optionIndex) => (
+               <label className="AnsOption" key={optionIndex}>
+                 <input type="radio" name={`questions-${index}`} value={option}
+
+                   checked={selectedAnswers[index] === option}
+                   onChange={(event) => this.handleOptionChange(event, index)}
+                 />
+                 {option}
+               </label>
+             ))}
+           </div>
+         </div>
+       ))}
+
+ {currentQuestion === questions.length - 1 && (
+         <button onClick={this.handleSubmit}>Submit</button>
+       )}
+       {score !== null && (
+         <p>Your score is {score}</p>
+       )}
+
+     </div>
+   );
+ }
 }
+
 export default HtmlQuize;
