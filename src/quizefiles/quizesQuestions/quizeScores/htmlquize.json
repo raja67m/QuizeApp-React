@@ -1,0 +1,21 @@
+[
+{
+   "id":1,
+   "questionText":"What is html?",
+   "options":["Programing Lanugae","Makup Lanugage","Css styling"],
+   "ans":"Makup Lanugage"
+},
+{
+   "id":2,
+   "questionText":"What is use tag",
+   "options":["Div","{}","script"],
+   "ans":"div"
+},
+{
+   "id":3,
+   "questionText":"html is the best language?",
+   "options":["NO","yes","Other"],
+   "ans":"NO"
+}
+
+]

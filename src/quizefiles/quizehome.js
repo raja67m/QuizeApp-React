@@ -50,6 +50,6 @@ class QuizeApp extends React.Component{
       </div>
    }
 
-}
-
-export default QuizeApp;
+}                            
+                         
+export default QuizeApp;        
