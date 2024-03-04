@@ -7,7 +7,7 @@ render() {
  return(
   <div className="HtmlConatiner">
 
-
+    <h1>Html Quize</h1>
      <div className="HtmlQuize">
 
 
