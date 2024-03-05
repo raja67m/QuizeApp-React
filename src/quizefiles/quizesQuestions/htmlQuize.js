@@ -1,11 +1,37 @@
 import React from "react";
 import "./htmlQuize.css";
 import Questions from "./quizeScores/htmlquize.json";
+import contgration from "./quizeScores/congrationsgif.gif";
 class HtmlQuize extends React.Component {
+  
+  constructor(props){
+    super(props);
+    this.state={
+      showCongratsPopup:false,
+      showAveragePopup:false,
+      showLowPopup:false
+    }
+  }
+
+  //handleshowPopup 
+handleCongrats=()=>{
+  this.setState({
+    showCongratsPopup:true
+  })
+}
+
+//popup close function
+handleCancelPoup=()=>{
+  this.setState({
+    showCongratsPopup:false
+  })
+}
+
 
 render() {
  return(
-  <div className="HtmlConatiner">
+
+  <>
 
     <h1>Html Quize</h1>
      <div className="HtmlQuize">
@@ -27,16 +53,40 @@ render() {
 
 
  ))}
+
+
         
         </div>
               
             ))
 
           }
-     
+      <button className="submitBtn" onClick={this.handleCongrats}>Submit</button>
+      {
+        this.state.showCongratsPopup && (
+          <div className="Popup">
+            <div className="Popup-content">
+
+            <img  className="gifImage"   src={contgration} alt="Not visible "/>
+
+           <div className="ScoreBox">
+
+          
+          <p>Your scores 100</p>
+          <button className="ok" onClick={this.handleCancelPoup} >Ok</button>
+          
+          </div>
+            </div>
+
+          </div>
+        )
+        
+
+        
+      }
 
      </div>
-</div>
+     </>
    );
  }
 }
