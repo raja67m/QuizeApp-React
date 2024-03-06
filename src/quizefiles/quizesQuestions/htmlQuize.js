@@ -7,18 +7,55 @@ class HtmlQuize extends React.Component {
   constructor(props){
     super(props);
     this.state={
+      selectedAnswers:{},
+      finalScore:0,
       showCongratsPopup:false,
       showAveragePopup:false,
       showLowPopup:false
     }
   }
 
+  // handle option is selected
+
+  handleOptionSelect = (questionId, selectedOption) => {
+    this.setState(prevState => ({
+      selectedAnswers: {
+        ...prevState.selectedAnswers,
+        [questionId]: selectedOption
+      }
+    }));
+  };  
+
+// calculated the score to the fucntion:
+calculateScore = () => {
+  let score = 0;
+  Questions.forEach(question => {
+    if (this.state.selectedAnswers[question.id] === question.ans) {
+      score += 1;
+    }
+  });
+  return score;
+};
+
+
   //handleshowPopup 
-handleCongrats=()=>{
-  this.setState({
-    showCongratsPopup:true
-  })
-}
+  handleCongrats = () => {
+    const finalScore = this.calculateScore();
+    this.setState({
+      finalScore
+    });
+
+    if(finalScore >=7){
+      this.setState({
+        showCongratsPopup:true
+      })
+    }else if(finalScore>=4 && finalScore >=7){
+      this.setState({ showAveragePopup:true})
+    }
+    else{
+      this.setState({showLowPopup:true})
+    }
+  };
 
 //popup close function
 handleCancelPoup=()=>{
@@ -46,7 +83,9 @@ render() {
  {item.options.map((option,index)=>(
  <div className="questionFirst" key={index}>
    <label className="AnsOption" >
-         <input type="radio" />
+         <input   type="radio"
+          onChange={() => this.handleOptionSelect(item.id, option)}
+          checked={this.state.selectedAnswers[item.id] === option} />
          {option}
         </label>
         </div>
@@ -54,9 +93,7 @@ render() {
 
  ))}
 
-
-        
-        </div>
+</div>
               
             ))
 
@@ -72,7 +109,7 @@ render() {
            <div className="ScoreBox">
 
           
-          <p>Your scores 100</p>
+          <p>Your Score: {this.state.finalScore}</p>
           <button className="ok" onClick={this.handleCancelPoup} >Ok</button>
           
           </div>
@@ -83,6 +120,88 @@ render() {
         
 
         
+      }
+
+{
+        this.state.showAveragePopup && (
+          <div className="Popup">
+            <div className="Popup-content">
+
+            <img  className="gifImage"   src={contgration} alt="Not visible "/>
+
+           <div className="ScoreBox">
+
+          
+          <p>Your Score: {this.state.finalScore}</p>
+          <button className="ok" onClick={this.handleCancelPoup} >Ok</button>
+          
+          </div>
+            </div>
+
+          </div>
+        )
+        }
+
+{
+        this.state.showCongratsPopup && (
+          <div className="Popup">
+            <div className="Popup-content">
+
+            <img  className="gifImage"   src={contgration} alt="Not visible "/>
+
+           <div className="ScoreBox">
+
+          
+          <p>Your Score: {this.state.finalScore}</p>
+          <button className="ok" onClick={this.handleCancelPoup} >Ok</button>
+          
+          </div>
+            </div>
+
+          </div>
+        )
+        }
+
+
+{
+        this.state.showCongratsPopup && (
+          <div className="Popup">
+            <div className="Popup-content">
+
+            <img  className="gifImage"   src={contgration} alt="Not visible "/>
+
+           <div className="ScoreBox">
+
+          
+          <p>Your Score: {this.state.finalScore}</p>
+          <button className="ok" onClick={this.handleCancelPoup} >Ok</button>
+          
+          </div>
+            </div>
+
+          </div>
+        )
+      }
+
+
+{
+        this.state.showLowPopup && (
+          <div className="Popup">
+            <div className="Popup-content">
+
+            <img  className="gifImage"   src={contgration} alt="Not visible "/>
+
+           <div className="ScoreBox">
+
+          
+          <p>Your Score: {this.state.finalScore}</p>
+          <button className="ok" onClick={this.handleCancelPoup} >Ok</button>
+          
+          </div>
+            </div>
+
+          </div>
+        )
       }
 
      </div>
