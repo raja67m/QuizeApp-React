@@ -2,6 +2,8 @@ import React from "react";
 import "./htmlQuize.css";
 import Questions from "./quizeScores/htmlquize.json";
 import contgration from "./quizeScores/congrationsgif.gif";
+import Average from "./quizeScores/averagescore.gif";
+import Low from "./quizeScores/lowscore.gif";
 class HtmlQuize extends React.Component {
   
   constructor(props){
@@ -60,7 +62,9 @@ calculateScore = () => {
 //popup close function
 handleCancelPoup=()=>{
   this.setState({
-    showCongratsPopup:false
+    showCongratsPopup:false,
+    showAveragePopup:false,
+    showLowPopup:false
   })
 }
 
@@ -127,7 +131,7 @@ render() {
           <div className="Popup">
             <div className="Popup-content">
 
-            <img  className="gifImage"   src={contgration} alt="Not visible "/>
+            <img  className="gifImage"   src={Average} alt="Not visible "/>
 
            <div className="ScoreBox">
 
@@ -141,47 +145,6 @@ render() {
           </div>
         )
         }
-
-{
-        this.state.showCongratsPopup && (
-          <div className="Popup">
-            <div className="Popup-content">
-
-            <img  className="gifImage"   src={contgration} alt="Not visible "/>
-
-           <div className="ScoreBox">
-
-          
-          <p>Your Score: {this.state.finalScore}</p>
-          <button className="ok" onClick={this.handleCancelPoup} >Ok</button>
-          
-          </div>
-            </div>
-
-          </div>
-        )
-        }
-
-
-{
-        this.state.showCongratsPopup && (
-          <div className="Popup">
-            <div className="Popup-content">
-
-            <img  className="gifImage"   src={contgration} alt="Not visible "/>
-
-           <div className="ScoreBox">
-
-          
-          <p>Your Score: {this.state.finalScore}</p>
-          <button className="ok" onClick={this.handleCancelPoup} >Ok</button>
-          
-          </div>
-            </div>
-
-          </div>
-        )
-      }
 
 
 {
@@ -189,7 +152,7 @@ render() {
           <div className="Popup">
             <div className="Popup-content">
 
-            <img  className="gifImage"   src={contgration} alt="Not visible "/>
+            <img  className="gifImage"   src={Low} alt="Not visible "/>
 
            <div className="ScoreBox">
 
