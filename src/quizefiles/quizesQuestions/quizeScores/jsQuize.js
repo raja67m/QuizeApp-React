@@ -1,12 +1,12 @@
 import React from "react";
-import "./htmlQuize.css";
-import Questions from "./quizeScores/htmlquize.json";
-import contgration from "./quizeScores/congrationsgif.gif";
-import Average from "./quizeScores/averagescore.gif";
-import Low from "./quizeScores/lowscore.gif";
-import { Link } from 'react-router-dom';
 
-import Home from "./quizeScores/home.jpg";
+import Questions from "./cssQuize.json";
+import contgration from "./congrationsgif.gif";
+import Average from "./averagescore.gif";
+import Low from "./lowscore.gif";
+import { Link } from 'react-router-dom';
+import "./jsQuize.css";
+import Home from "./home.jpg";
 class HtmlQuize extends React.Component {
   
   constructor(props){

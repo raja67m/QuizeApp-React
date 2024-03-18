@@ -21,35 +21,53 @@ class QuizeApp extends React.Component{
          </p>
 
          <div className="QuizeOptions">
-         <Link to ='/htmlquize'>
+      
             <div className="HtmlOption">
-               <img className="QuizeImageRead" src={Html} alt="Not Visible"/>
+            <Link to ='/htmlquize'>
+               <img className="QuizeImage" src={Html} alt="Not Visible"/>
+            </Link>
                <span>html quize</span>
             </div>
-            </Link>
+            
+
+           
             <div className="CssOption">
+            <Link to ='/cssquize'>
                 <img  className="QuizeImage" src={Css} alt="Not Visible"/>
+            </Link>
+
                 <span>css quize</span>
                 </div>
+           
+
+
             <div className="JavaScriptOption">
+            <Link to ='/jsquize'>
             <img className="QuizeImage"  src={Js} alt="Not Visible"/>
+            </Link>
             <span>JS quize</span>
-            <span></span>
-            </div>
+           </div>
+
+
             <div className="ReactOption">
-            <img className="QuizeImageRead" src={ReactJs} alt="Not Visible"/>
-            <span>react quize</span>
+            <Link to ='/reactquize'>
+            <img className="QuizeImage" src={ReactJs} alt="Not Visible"/>
+            </Link>
+            <span>reactquize</span>
             </div>
+
+
+
             <div className="UiOption">
+            <Link to ='/uiquize'>
             <img className="QuizeImage" src={UI} alt="Not Visible"/>
+            </Link>
             <span>Ui quize</span>
             </div>
          </div>
-       
-       <button className="QuizeStart">Start Quize</button>
+      
       </div>
    }
 
-}                            
-                         
+}                                                   
 export default QuizeApp;        

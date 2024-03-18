@@ -31,66 +31,74 @@ box-shadow: 5px 5px 5px 5px rgb(200, 184, 184);
 }   
 .HtmlOption{
   background-color: rgb(203, 69, 21);
- padding: 60px;
-  border: none;
+  width: 20%;
+border: none;
   border-radius: 25px 25px 0px 0px;
 margin: 10px;  
 display: flex;
 flex-direction: column;
+justify-content: center;
+align-items: center;
 cursor: pointer;  
 }
 
 .CssOption{
    background-color:rgb(15, 15, 183);
-   padding: 60px;
-    border: none;
-    border-radius: 25px 25px 0px 0px; 
-    margin: 10px; 
-    display: flex;
-flex-direction: column; 
-cursor: pointer;
+   width: 20%;
+   border: none;
+     border-radius: 25px 25px 0px 0px;
+   margin: 10px;  
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;  
 }
 .JavaScriptOption{
    background-color:rgb(244, 199, 17);
-   padding: 60px;
-    border: none;
-    border-radius: 25px 25px 0px 0px; 
-    margin: 10px;
-    display: flex;
-flex-direction: column; 
-cursor: pointer;
+   width: 20%;
+border: none;
+  border-radius: 25px 25px 0px 0px;
+margin: 10px;  
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+cursor: pointer;  
 }
 .ReactOption{
    background-color:rgb(19, 196, 196);
    padding: 60px;
-    border: none;
-    border-radius: 25px 25px 0px 0px; 
-    margin: 10px; 
-    display: flex;
-flex-direction: column; 
-cursor: pointer;
+   
+   border: none;
+     border-radius: 25px 25px 0px 0px;
+   margin: 10px;  
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
 }
 .UiOption{
    background-color:rgb(204, 21, 113);
    padding: 60px;
-    border: none;
-    border-radius: 25px 25px 0px 0px;  
-    margin: 5px; 
-    display: flex;
-flex-direction: column; 
-cursor: pointer;
+   border: none;
+     border-radius: 25px 25px 0px 0px;
+   margin: 10px;  
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
 }
 .QuizeImage{
    height: 60px;
    width: 60px;
    margin: 10px;
+  
+   
 }
-.QuizeImageRead{
-   height: 60px;
-   width: 60px;
-   margin: 10px;
-   margin-left: 25px;
-}
+
 span{
    color: white;
    font-weight: bold;
