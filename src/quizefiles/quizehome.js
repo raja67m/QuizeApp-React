@@ -17,7 +17,7 @@ class QuizeApp extends React.Component{
             <img src={Logo} className="LogoImage" alt="Not Visible"/>
          </div>
          <p className="IntroHeading">
-            Choose from categories below & see how many questions you can answer correctly out 5 questions!
+            Choose from categories below & see how many questions you can answer correctly out 10 questions!
          </p>
 
          <div className="QuizeOptions">

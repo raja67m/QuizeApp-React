@@ -1,27 +1,27 @@
 [
 {
    "id":1,
-   "questionText":"Question: What tag is used to create a hyperlink in HTML?",
+   "questionText":"1. Question: What tag is used to create a hyperlink in HTML?",
    "options":["<link>","<a>","<url>",
     "<hyperlink>]"],
    "ans":"<a>"
 },
 {
    "id":2,
-   "questionText":"Question: Which of the following tags is used to define an unordered list in HTML?",
+   "questionText":"2. Question: Which of the following tags is used to define an unordered list in HTML?",
    "options":[ "<ol>","<list>","<ul>","<li>]"],
    "ans":"<ul>"
 },
 {
    "id":3,
-   "questionText":"Question: What is the correct HTML tag for inserting a line break?",
+   "questionText":"3. Question: What is the correct HTML tag for inserting a line break?",
    "options":["<br>","<lb>",
    "<break>" ,"<newline>" ],
    "ans":"<br>" 
 },
 {
    "id":4,
-   "questionText":"Question: Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
+   "questionText":"4. Question: Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
    "options":[ "alt",
    "title",
    "src",
@@ -30,14 +30,14 @@
 },
 {
    "id":5,
-   "questionText":"Which HTML tag is used to define the header for a document or section?",
+   "questionText":"5. Which HTML tag is used to define the header for a document or section?",
    "options":["<header>","<head>","<title>",
    "<h1>"],
    "ans":"<h1>"
 },
 {
    "id":6,
-   "questionText":"In HTML, which attribute is used to specify an inline style for an element?",
+   "questionText":"6. In HTML, which attribute is used to specify an inline style for an element?",
    "options":["class","style","id","inline"],
    "ans":"style"
 
@@ -45,13 +45,13 @@
 },
 {
    "id":7,
-   "questionText":"Which HTML tag is used to define a table row?",
+   "questionText":"7. Which HTML tag is used to define a table row?",
    "options":["<row>","<tr>","<td>","<th>"],
    "ans":"<tr>"
 },
 {
    "id":8,
-   "questionText":"What does HTML stand for?",
+   "questionText":"8. What does HTML stand for?",
    "options":["Hyperlinks and Text Markup Language","Hyper Text Markup Language",
    "Home Tool Markup Language",
    "Hyper Transfer Markup Language"],
@@ -59,13 +59,13 @@
 },
 {
    "id":9,
-   "questionText":"Which of the following tags is used to create a numbered list in HTML?",
+   "questionText":"9. Which of the following tags is used to create a numbered list in HTML?",
    "options":["<ol>","<ul>","<li>","<list>"],
    "ans":"<ol>"
 },
 {
    "id":10,
-   "questionText":"In HTML, which tag is used to define a paragraph?",
+   "questionText":"10. In HTML, which tag is used to define a paragraph?",
    "options":["<p>","<para>","<pg>","<paragraph>"],
    "ans":" <p>"
 }

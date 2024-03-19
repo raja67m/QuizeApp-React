@@ -1,75 +1,64 @@
-[
-   {
-      "id":1,
-      "questionText":"Question: What tag is used to create a hyperlink in HTML?",
-      "options":["<link>","<a>","<url>",
-       "<hyperlink>]"],
-      "ans":"<a>"
-   },
-   {
-      "id":2,
-      "questionText":"Question: Which of the following tags is used to define an unordered list in HTML?",
-      "options":[ "<ol>","<list>","<ul>","<li>]"],
-      "ans":"<ul>"
-   },
-   {
-      "id":3,
-      "questionText":"Question: What is the correct HTML tag for inserting a line break?",
-      "options":["<br>","<lb>",
-      "<break>" ,"<newline>" ],
-      "ans":"<br>" 
-   },
-   {
-      "id":4,
-      "questionText":"Question: Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
-      "options":[ "alt",
-      "title",
-      "src",
-      "caption"],
-      "ans":"alt"
-   },
-   {
-      "id":5,
-      "questionText":"Which HTML tag is used to define the header for a document or section?",
-      "options":["<header>","<head>","<title>",
-      "<h1>"],
-      "ans":"<h1>"
-   },
-   {
-      "id":6,
-      "questionText":"In HTML, which attribute is used to specify an inline style for an element?",
-      "options":["class","style","id","inline"],
-      "ans":"style"
-   
-      
-   },
-   {
-      "id":7,
-      "questionText":"Which HTML tag is used to define a table row?",
-      "options":["<row>","<tr>","<td>","<th>"],
-      "ans":"<tr>"
-   },
-   {
-      "id":8,
-      "questionText":"What does HTML stand for?",
-      "options":["Hyperlinks and Text Markup Language","Hyper Text Markup Language",
-      "Home Tool Markup Language",
-      "Hyper Transfer Markup Language"],
-      "ans":"Hyper Text Markup Language"
-   },
-   {
-      "id":9,
-      "questionText":"Which of the following tags is used to create a numbered list in HTML?",
-      "options":["<ol>","<ul>","<li>","<list>"],
-      "ans":"<ol>"
-   },
-   {
-      "id":10,
-      "questionText":"In HTML, which tag is used to define a paragraph?",
-      "options":["<p>","<para>","<pg>","<paragraph>"],
-      "ans":" <p>"
-   }
-   
-   
-   
+ [
+     {
+       "id": 1,
+       "question": "1. What is React.js?",
+       "options": ["A JavaScript library for building user interfaces", "A server-side framework", "A database management system", "A programming language"],
+       "answer": "A JavaScript library for building user interfaces"
+     },
+     {
+      "id": 2,
+       "question": "2. Which function is used to render React components?",
+       "options": ["render()", "display()", "show()", "component()"],
+       "answer": "render()"
+     },
+     {
+      "id": 3,
+       "question": "3. What is JSX in React.js?",
+       "options": ["JavaScript XML", "JavaScript Extension", "JavaScript Syntax", "JavaScript Executor"],
+       "answer": "JavaScript XML"
+     },
+     {
+      "id": 4,
+       "question": "4. In React.js, what is a component?",
+       "options": ["A reusable piece of UI", "A function that returns HTML", "A JavaScript class or function", "All of the above"],
+       "answer": "All of the above"
+     },
+     {
+      "id": 5,
+       "question": "5. What is state in React.js?",
+       "options": ["An object that holds data", "A function that updates data", "A component's lifecycle method", "A type of props"],
+       "answer": "An object that holds data"
+     },
+     {
+      "id": 6,
+       "question": "6. Which lifecycle method is called after a component is rendered for the first time?",
+       "options": ["componentDidMount()", "componentWillMount()", "render()", "componentDidUpdate()"],
+       "answer": "componentDidMount()"
+     },
+     {
+      "id": 7,
+       "question": "7. What is the purpose of React Router?",
+       "options": ["To manage routing in React applications", "To handle HTTP requests", "To create reusable components", "To manage state"],
+       "answer": "To manage routing in React applications"
+     },
+     {
+      "id": 8,
+       "question": "8. Which hook is used to add state to functional components in React?",
+       "options": ["useState()", "useEffect()", "useContext()", "useReducer()"],
+       "answer": "useState()"
+     },
+     {
+      "id": 9,
+       "question": "9. What is the virtual DOM in React.js?",
+       "options": ["A lightweight version of the browser's DOM", "An alternative to CSS", "A JavaScript data structure", "A type of component"],
+       "answer": "A lightweight version of the browser's DOM"
+     },
+     {
+      "id": 10,
+       "question": "10. Which method is used to update state in React?",
+       "options": ["setState()", "updateState()", "changeState()", "modifyState()"],
+       "answer": "setState()"
+     }
    ]
+ 
+ 

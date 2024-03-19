@@ -1,75 +1,73 @@
-[
-   {
-      "id":1,
-      "questionText":"Question: What tag is used to create a hyperlink in HTML?",
-      "options":["<link>","<a>","<url>",
-       "<hyperlink>]"],
-      "ans":"<a>"
-   },
-   {
-      "id":2,
-      "questionText":"Question: Which of the following tags is used to define an unordered list in HTML?",
-      "options":[ "<ol>","<list>","<ul>","<li>]"],
-      "ans":"<ul>"
-   },
-   {
-      "id":3,
-      "questionText":"Question: What is the correct HTML tag for inserting a line break?",
-      "options":["<br>","<lb>",
-      "<break>" ,"<newline>" ],
-      "ans":"<br>" 
-   },
-   {
-      "id":4,
-      "questionText":"Question: Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
-      "options":[ "alt",
-      "title",
-      "src",
-      "caption"],
-      "ans":"alt"
-   },
-   {
-      "id":5,
-      "questionText":"Which HTML tag is used to define the header for a document or section?",
-      "options":["<header>","<head>","<title>",
-      "<h1>"],
-      "ans":"<h1>"
-   },
-   {
-      "id":6,
-      "questionText":"In HTML, which attribute is used to specify an inline style for an element?",
-      "options":["class","style","id","inline"],
-      "ans":"style"
-   
-      
-   },
-   {
-      "id":7,
-      "questionText":"Which HTML tag is used to define a table row?",
-      "options":["<row>","<tr>","<td>","<th>"],
-      "ans":"<tr>"
-   },
-   {
-      "id":8,
-      "questionText":"What does HTML stand for?",
-      "options":["Hyperlinks and Text Markup Language","Hyper Text Markup Language",
-      "Home Tool Markup Language",
-      "Hyper Transfer Markup Language"],
-      "ans":"Hyper Text Markup Language"
-   },
-   {
-      "id":9,
-      "questionText":"Which of the following tags is used to create a numbered list in HTML?",
-      "options":["<ol>","<ul>","<li>","<list>"],
-      "ans":"<ol>"
-   },
-   {
-      "id":10,
-      "questionText":"In HTML, which tag is used to define a paragraph?",
-      "options":["<p>","<para>","<pg>","<paragraph>"],
-      "ans":" <p>"
-   }
-   
-   
-   
+ [
+     {
+       "id": 1,
+       "question": "1. What does UI stand for?",
+       "options": ["User Interaction", "User Involvement", "User Interface", "User Integration"],
+       "answer": "User Interface"
+     },
+     {
+       
+      "id": 2,
+       "question": "2. Which of the following is not a fundamental principle of UI design?",
+       "options": ["Consistency", "Feedback", "Flexibility", "Simplicity"],
+       "answer": "Flexibility"
+     },
+     {
+       
+      "id": 3,
+       "question": "3. What is the purpose of wireframing in UI design?",
+       "options": ["To create a visual representation of the final product", "To define the layout and structure of a webpage or app", "To add color and graphics to a design", "To test the usability of a product"],
+       "answer": "To define the layout and structure of a webpage or app"
+     },
+     {
+       
+      "id": 4,
+       "question": "4. What does the term 'above the fold' refer to in UI design?",
+       "options": ["The top section of a webpage that is visible without scrolling", "A design technique that emphasizes bold colors and fonts", "A type of animation used for page transitions", "A method for organizing content into hierarchical layers"],
+       "answer": "The top section of a webpage that is visible without scrolling"
+     },
+     {
+       
+      "id": 5,
+       "question": "5. What is the purpose of usability testing in UI design?",
+       "options": ["To evaluate how easy a product is to use", "To measure the aesthetic appeal of a design", "To identify bugs and technical issues", "To gather feedback from users"],
+       "answer": "To evaluate how easy a product is to use"
+     },
+     {
+       
+      "id": 6,
+       "question": "6. What does the acronym 'UX' stand for?",
+       "options": ["User Experience", "User Exchange", "User Expertise", "User Experiment"],
+       "answer": "User Experience"
+     },
+     {
+       
+      "id": 7,
+       "question": "7. Which of the following is not a common UI design tool?",
+       "options": ["Adobe Photoshop", "Sketch", "Figma", "Visual Studio Code"],
+       "answer": "Visual Studio Code"
+     },
+     {
+       
+      "id": 8,
+       "question": "8. What is the purpose of A/B testing in UI design?",
+       "options": ["To compare two versions of a design to see which performs better", "To test the accessibility of a product", "To create alternative layouts for different screen sizes", "To analyze user behavior on a website or app"],
+       "answer": "To compare two versions of a design to see which performs better"
+     },
+     {
+       
+      "id": 9,
+       "question": "9. Which color scheme uses colors that are next to each other on the color wheel?",
+       "options": ["Analogous", "Complementary", "Monochromatic", "Triadic"],
+       "answer": "Analogous"
+     },
+     {
+       
+      "id": 10,
+       "question": "10. What is the purpose of a style guide in UI design?",
+       "options": ["To maintain consistency across a project", "To define the target audience for a product", "To provide guidelines for user research", "To optimize a website or app for search engines"],
+       "answer": "To maintain consistency across a project"
+     }
    ]
+ 
+ 

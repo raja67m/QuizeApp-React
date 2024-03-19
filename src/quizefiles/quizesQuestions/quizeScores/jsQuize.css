@@ -1,10 +1,10 @@
-.question{
+.Jsquestion{
    color:rgb(244, 199, 17);
    font-weight: bold;
    font-size: larger;
 }
 
-h1{
+.cssTitle{
   margin-left: 35%;
    text-transform: uppercase;
    color:rgb(244, 199, 17);
@@ -45,7 +45,7 @@ h1{
    cursor: pointer;
 }
 
-.submitBtn{
+.JssubmitBtn{
    padding: 10px 20px;
    margin: 20px;
    border: none;
@@ -75,7 +75,7 @@ h1{
    border-radius:10px;
    box-shadow: 0px 2px 4px rgb(0,0, 0, 0.1);
 }
-.ScoreBox{
+.JsScoreBox{
    color: white;
    width: 350px;
    background-color:rgb(244, 199, 17);
@@ -95,7 +95,7 @@ p{
    padding: 8px;
    margin-top: 10px;
 }
-.ok{
+.Jsok{
    padding: 10px 20px;
    margin: 20px;
    border: none;

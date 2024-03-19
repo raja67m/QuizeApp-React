@@ -36,7 +36,7 @@ class HtmlQuize extends React.Component {
 calculateScore = () => {
   let score = 0;
   Questions.forEach(question => {
-    if (this.state.selectedAnswers[question.id] === question.ans) {
+    if (this.state.selectedAnswers[question.id] === question.answer) {
       score += 1;
     }
   });
@@ -83,7 +83,7 @@ render() {
 <img src={Home} className="Home" alt="Not visible"/>
 
 </Link>
-<h1>Html Quize</h1>
+<h1 className="CssTitle">Css Quize</h1>
 
 </div>
   
@@ -95,7 +95,7 @@ render() {
 
          <div key={item.id}>
           
-         <label className="question">{item.questionText}</label>
+         <label className="Cssquestion">{item.question}</label>
         
  {item.options.map((option,index)=>(
  <div className="questionFirst" key={index}>
@@ -115,7 +115,7 @@ render() {
             ))
 
           }
-      <button className="submitBtn" onClick={this.handleCongrats}>Submit</button>
+      <button className="CsssubmitBtn" onClick={this.handleCongrats}>Submit</button>
       {
         this.state.showCongratsPopup && (
           <div className="Popup">
@@ -123,11 +123,11 @@ render() {
 
             <img  className="gifImage"   src={contgration} alt="Not visible "/>
 
-           <div className="ScoreBox">
+           <div className="CssScoreBox">
 
           
           <p>Your Score: {this.state.finalScore}</p>
-          <button className="ok" onClick={this.handleCancelPoup} >Ok</button>
+          <button className="Cssok" onClick={this.handleCancelPoup} >Ok</button>
           
           </div>
             </div>
@@ -146,11 +146,11 @@ render() {
 
             <img  className="gifImage"   src={Average} alt="Not visible "/>
 
-           <div className="ScoreBox">
+           <div className="CssScoreBox">
 
           
           <p>Your Score: {this.state.finalScore}</p>
-          <button className="ok" onClick={this.handleCancelPoup} >Ok</button>
+          <button className="Cssok" onClick={this.handleCancelPoup} >Ok</button>
           
           </div>
             </div>
@@ -167,11 +167,11 @@ render() {
 
             <img  className="gifImage"   src={Low} alt="Not visible "/>
 
-           <div className="ScoreBox">
+           <div className="CssScoreBox">
 
           
           <p>Your Score: {this.state.finalScore}</p>
-          <button className="ok" onClick={this.handleCancelPoup} >Ok</button>
+          <button className="Cssok" onClick={this.handleCancelPoup} >Ok</button>
           
           </div>
             </div>
