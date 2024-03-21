@@ -17,20 +17,22 @@ class HtmlQuize extends React.Component {
       finalScore:0,
       showCongratsPopup:false,
       showAveragePopup:false,
-      showLowPopup:false
+      showLowPopup:false,
+      submitted: false
     }
   }
 
   // handle option is selected
-
   handleOptionSelect = (questionId, selectedOption) => {
-    this.setState(prevState => ({
-      selectedAnswers: {
-        ...prevState.selectedAnswers,
-        [questionId]: selectedOption
-      }
-    }));
-  };  
+    if (!this.state.submitted) { // Allow selection only before submission
+      this.setState(prevState => ({
+        selectedAnswers: {
+          ...prevState.selectedAnswers,
+          [questionId]: selectedOption
+        }
+      }));
+    }
+  }; 
 
 // calculated the score to the fucntion:
 calculateScore = () => {
@@ -44,24 +46,23 @@ calculateScore = () => {
 };
 
 
-  //handleshowPopup 
-  handleCongrats = () => {
-    const finalScore = this.calculateScore();
-    this.setState({
-      finalScore
-    });
+ // handle showPopup
+ handleCongrats = () => {
+  const finalScore = this.calculateScore();
+  this.setState({
+    finalScore,
+    submitted: true
+  });
 
-    if(finalScore >=7){
-      this.setState({
-        showCongratsPopup:true
-      })
-    }else if(finalScore>=4 && finalScore >=7){
-      this.setState({ showAveragePopup:true})
-    }
-    else{
-      this.setState({showLowPopup:true})
-    }
-  };
+  // Show appropriate popup based on score
+  if (finalScore >= 7) {
+    this.setState({ showCongratsPopup: true });
+  } else if (finalScore >= 4 && finalScore < 7) {
+    this.setState({ showAveragePopup: true });
+  } else {
+    this.setState({ showLowPopup: true });
+  }
+};
 
 //popup close function
 handleCancelPoup=()=>{
@@ -99,10 +100,18 @@ render() {
         
  {item.options.map((option,index)=>(
  <div className="questionFirst" key={index}>
-   <label className="AnsOption" >
-         <input   type="radio"
-          onChange={() => this.handleOptionSelect(item.id, option)}
-          checked={this.state.selectedAnswers[item.id] === option} />
+   <label
+                    className={`AnsOption ${
+                      this.state.submitted ? (option === item.answer ? "correct" : "") : ""
+                    }`}
+                  >
+
+                   <input
+                      type="radio"
+                      onChange={() => this.handleOptionSelect(item.id, option)}
+                      checked={this.state.selectedAnswers[item.id] === option}
+                      disabled={this.state.submitted}
+                    />
          {option}
         </label>
         </div>
@@ -115,7 +124,8 @@ render() {
             ))
 
           }
-      <button className="CsssubmitBtn" onClick={this.handleCongrats}>Submit</button>
+           <button className={`CsssubmitBtn ${this.state.submitted ? 'clicked' : ''}`} onClick={this.handleCongrats} disabled={this.state.submitted}>Submit</button>
+     
       {
         this.state.showCongratsPopup && (
           <div className="Popup">

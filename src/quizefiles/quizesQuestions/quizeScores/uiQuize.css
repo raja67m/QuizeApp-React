@@ -3,6 +3,17 @@
    font-weight: bold;
    font-size: larger;
 }
+.AnsOption.selectedOption {
+   color: green;
+ }
+ .UisubmitBtn.clicked {
+   color: white;
+    background-color:rgb(247, 107, 200);
+ }
+ 
+ .correct {
+   color: green;
+ }
 
 .UiTitle{
   margin-left: 35%;

@@ -16,20 +16,22 @@ class HtmlQuize extends React.Component {
       finalScore:0,
       showCongratsPopup:false,
       showAveragePopup:false,
-      showLowPopup:false
+      showLowPopup:false,
+      submitted: false
     }
   }
 
-  // handle option is selected
-
-  handleOptionSelect = (questionId, selectedOption) => {
+ // handle option is selected
+ handleOptionSelect = (questionId, selectedOption) => {
+  if (!this.state.submitted) { // Allow selection only before submission
     this.setState(prevState => ({
       selectedAnswers: {
         ...prevState.selectedAnswers,
         [questionId]: selectedOption
       }
     }));
-  };  
+  }
+};   
 
 // calculated the score to the fucntion:
 calculateScore = () => {
@@ -47,7 +49,8 @@ calculateScore = () => {
   handleCongrats = () => {
     const finalScore = this.calculateScore();
     this.setState({
-      finalScore
+      finalScore,
+      submitted:true,
     });
 
     if(finalScore >=7){
@@ -98,10 +101,17 @@ render() {
         
  {item.options.map((option,index)=>(
  <div className="questionFirst" key={index}>
-   <label className="AnsOption" >
-         <input   type="radio"
-          onChange={() => this.handleOptionSelect(item.id, option)}
-          checked={this.state.selectedAnswers[item.id] === option} />
+   <label
+                    className={`AnsOption ${
+                      this.state.submitted ? (option === item.answer ? "correct" : "") : ""
+                    }`}
+                  >
+          <input
+                      type="radio"
+                      onChange={() => this.handleOptionSelect(item.id, option)}
+                      checked={this.state.selectedAnswers[item.id] === option}
+                      disabled={this.state.submitted}
+                    />
          {option}
         </label>
         </div>
@@ -114,7 +124,8 @@ render() {
             ))
 
           }
-      <button className="JssubmitBtn" onClick={this.handleCongrats}>Submit</button>
+             <button className={`JssubmitBtn ${this.state.submitted ? 'clicked' : ''}`} onClick={this.handleCongrats} disabled={this.state.submitted}>Submit</button>
+    
       {
         this.state.showCongratsPopup && (
           <div className="Popup">

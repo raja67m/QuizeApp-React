@@ -3,7 +3,17 @@
    font-weight: bold;
    font-size: larger;
 }
-
+.AnsOption.selectedOption {
+   color: green;
+ }
+ .ReactsubmitBtn.clicked {
+   color: white;
+   background-color: rgb(97, 220, 244);
+ }
+ 
+ .correct {
+   color: green;
+ }
 .reactTitle{
   margin-left: 35%;
    text-transform: uppercase;

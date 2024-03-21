@@ -3,6 +3,17 @@
    font-weight: bold;
    font-size: larger;
 }
+.AnsOption.selectedOption {
+   color: green;
+ }
+ .submitBtn.clicked {
+   color: white;
+   background-color: rgb(244, 129, 87);
+ }
+ 
+ .correct {
+   color: green;
+ }
 
 h1{
   margin-left: 35%;

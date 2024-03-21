@@ -4,6 +4,18 @@
    font-size: larger;
 }
 
+.AnsOption.selectedOption {
+   color: green;
+ }
+ .CsssubmitBtn.clicked {
+   color: white;
+   background-color: rgb(129, 129, 248);
+ }
+ 
+ .correct {
+   color: green;
+ }
+
 .CssTitle{
   margin-left: 35%;
    text-transform: uppercase;

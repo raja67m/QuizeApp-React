@@ -67,7 +67,7 @@
    "id":10,
    "questionText":"10. In HTML, which tag is used to define a paragraph?",
    "options":["<p>","<para>","<pg>","<paragraph>"],
-   "ans":" <p>"
+   "ans":"<p>"
 }
 
 
